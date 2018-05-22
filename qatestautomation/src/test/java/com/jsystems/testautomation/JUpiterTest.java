@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 @DisplayName("JUpiter Test class")
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class JUpiterTest extends ConfigJunit {
+public class JUpiterTest extends ConfigJunita {
 
     @BeforeEach
     public void beforeEach(){
@@ -34,21 +34,22 @@ public class JUpiterTest extends ConfigJunit {
 
     @Nested
     @DisplayName("JUpiter nested Test class")
-    public class JupiterNestedClass extends ConfigJunit{
+    public class JupiterNestedClass extends ConfigJunita {
+        @Tag("all")
         @Test
         @DisplayName("A Test for checking string test")
         public void afirstNestedTest() {
 
             assertTrue(true == true);
-            assertTrue(testowyString.equals("firstTest"));
+            assertTrue(testowyStringa.equals("firstTest"));
             assertTrue("message from assertTrue", 5 == 2 + 3);
             assertFalse("message from assertTrue", 5 == 3 + 3);
-            assertFalse("message from assertTrue", testowyString.equals("Adam"));
-            assertEquals(testowyString, "firstTest");
-            assertSame(testowyString, "firstTest");
-            assertThat(testowyString, containsString("first"));
-            assertThat(testowyString, equalTo("firstTest"));
-            assertThat(testowyString, endsWith("Test"));
+            assertFalse("message from assertTrue", testowyStringa.equals("Adam"));
+            assertEquals(testowyStringa, "firstTest");
+            assertSame(testowyStringa, "firstTest");
+            assertThat(testowyStringa, containsString("first"));
+            assertThat(testowyStringa, equalTo("firstTest"));
+            assertThat(testowyStringa, endsWith("Test"));
 
             System.out.println(0.2 * 0.2);
             assertFalse(0.2 * 0.2 == 0.04);
@@ -57,42 +58,47 @@ public class JUpiterTest extends ConfigJunit {
 
     }
 
-    String testowyString = "firstTest";
+    String testowyStringa = "firstTest";
 
+
+    @Tag("Repeated")
+    @Tag("all")
     @Test
     @DisplayName("B Test for checking string test")
+    @RepeatedTest(6)
     public void cfirstTest() {
 
         assertTrue(true == true);
-        assertTrue(testowyString.equals("firstTest"));
+        assertTrue(testowyStringa.equals("firstTest"));
         assertTrue("message from assertTrue", 5 == 2 + 3);
         assertFalse("message from assertTrue", 5 == 3 + 3);
-        assertFalse("message from assertTrue", testowyString.equals("Adam"));
-        assertEquals(testowyString, "firstTest");
-        assertSame(testowyString, "firstTest");
-        assertThat(testowyString, containsString("first"));
-        assertThat(testowyString, equalTo("firstTest"));
-        assertThat(testowyString, endsWith("Test"));
+        assertFalse("message from assertTrue", testowyStringa.equals("Adam"));
+        assertEquals(testowyStringa, "firstTest");
+        assertSame(testowyStringa, "firstTest");
+        assertThat(testowyStringa, containsString("first"));
+        assertThat(testowyStringa, equalTo("firstTest"));
+        assertThat(testowyStringa, endsWith("Test"));
 
         System.out.println(0.2 * 0.2);
         assertFalse(0.2 * 0.2 == 0.04);
         assertTrue(new BigDecimal("0.2").multiply(new BigDecimal("0.2")).doubleValue() == 0.04);
     }
 
+    @Tag("all")
     @Test
     @DisplayName("C Test for checking string test")
     public void bfirstTest() {
 
         assertTrue(true == true);
-        assertTrue(testowyString.equals("firstTest"));
+        assertTrue(testowyStringa.equals("firstTest"));
         assertTrue("message from assertTrue", 5 == 2 + 3);
         assertFalse("message from assertTrue", 5 == 3 + 3);
-        assertFalse("message from assertTrue", testowyString.equals("Adam"));
-        assertEquals(testowyString, "firstTest");
-        assertSame(testowyString, "firstTest");
-        assertThat(testowyString, containsString("first"));
-        assertThat(testowyString, equalTo("firstTest"));
-        assertThat(testowyString, endsWith("Test"));
+        assertFalse("message from assertTrue", testowyStringa.equals("Adam"));
+        assertEquals(testowyStringa, "firstTest");
+        assertSame(testowyStringa, "firstTest");
+        assertThat(testowyStringa, containsString("first"));
+        assertThat(testowyStringa, equalTo("firstTest"));
+        assertThat(testowyStringa, endsWith("Test"));
 
         System.out.println(0.2 * 0.2);
         assertFalse(0.2 * 0.2 == 0.04);

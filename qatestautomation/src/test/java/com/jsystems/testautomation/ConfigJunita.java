@@ -4,7 +4,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.BeforeAll;
 
-public class ConfigJunit {
+public class ConfigJunita {
 
     @BeforeClass
     public static void beforeClass() {
