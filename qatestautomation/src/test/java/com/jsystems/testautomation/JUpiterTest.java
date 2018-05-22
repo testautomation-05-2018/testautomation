@@ -21,20 +21,19 @@ import static org.junit.Assert.*;
 public class JUpiterTest extends ConfigJunita {
 
     @BeforeEach
-    public void beforeEach(){
+    public void beforeEach() {
         System.out.println("================= @BeforeEach =========");
-
     }
 
     @AfterEach
-    public void afterEach(){
+    public void afterEach() {
         System.out.println("================= @AfterEach =========");
-
     }
 
     @Nested
     @DisplayName("JUpiter nested Test class")
     public class JupiterNestedClass extends ConfigJunita {
+
         @Tag("all")
         @Test
         @DisplayName("A Test for checking string test")
@@ -55,13 +54,10 @@ public class JUpiterTest extends ConfigJunita {
             assertFalse(0.2 * 0.2 == 0.04);
             assertTrue(new BigDecimal("0.2").multiply(new BigDecimal("0.2")).doubleValue() == 0.04);
         }
-
     }
 
     String testowyStringa = "firstTest";
 
-
-    @Tag("Repeated")
     @Tag("all")
     @Test
     @DisplayName("B Test for checking string test")
@@ -84,6 +80,7 @@ public class JUpiterTest extends ConfigJunita {
         assertTrue(new BigDecimal("0.2").multiply(new BigDecimal("0.2")).doubleValue() == 0.04);
     }
 
+    @Tag("Repeated")
     @Tag("all")
     @Test
     @DisplayName("C Test for checking string test")

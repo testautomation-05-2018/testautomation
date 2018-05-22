@@ -22,15 +22,13 @@ import static org.junit.Assert.*;
 public class JunitTest extends ConfigJunita {
 
     @Before
-    public void setUp(){
+    public void setUp() {
         System.out.println("================= @Before =========");
-
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         System.out.println("================= @After =========");
-
     }
 
 
@@ -38,7 +36,6 @@ public class JunitTest extends ConfigJunita {
 
     @Test
     public void firstTest() {
-
 
         assertTrue(true == true);
         assertTrue(testowyString.equals("firstTest"));
@@ -81,5 +78,4 @@ public class JunitTest extends ConfigJunita {
         assertThat(testowyString, matchesPattern(".*tT.*"));
         assertThat("123456789", matchesPattern("^[0-9]+"));
     }
-
 }
