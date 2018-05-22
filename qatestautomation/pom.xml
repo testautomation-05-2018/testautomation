@@ -58,6 +58,7 @@
                         <!--<version>5.0.1</version>-->
                     <!--</dependency>-->
                 <!--</dependencies>-->
+
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
