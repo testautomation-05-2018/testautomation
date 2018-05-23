@@ -4,44 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jsystems</groupId>
-    <artifactId>qatestautomation</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
     <parent>
-        <groupId>com.jsystems</groupId>
         <artifactId>testautomation</artifactId>
+        <groupId>com.jsystems</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <groupId>com.jsystems</groupId>
+    <artifactId>qa-frontend</artifactId>
 
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
-    <profiles>
-        <!-- profile do uruchamiania testów według tagu-->
-        <!-- wywołanie mvn clean install -PallTests -->
-        <profile>
-            <id>allTests</id>
-            <properties>
-                <tests>all</tests>
-            </properties>
-        </profile>
-        <profile>
-            <id>regresion</id>
-            <properties>
-                <tests>Repeated</tests>
-            </properties>
-        </profile>
-        <profile>
-            <id>param</id>
-            <properties>
-                <tests>param</tests>
-            </properties>
-        </profile>
-    </profiles>
 
     <build>
         <plugins>
@@ -88,7 +64,7 @@
                     <!-- uruchamiania testów z podaniem tagu poprzez parametr w wywołaniu-->
                     <!-- wywołanie mvn clean install -Dtests=all -->
                     <!--<properties>-->
-                        <!--<includeTags>${tests}</includeTags>-->
+                    <!--<includeTags>${tests}</includeTags>-->
                     <!--</properties>-->
                 </configuration>
             </plugin>
@@ -96,20 +72,17 @@
     </build>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
         </dependency>
+
+
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.jcabi/jcabi-matchers -->
-        <dependency>
-            <groupId>com.jcabi</groupId>
-            <artifactId>jcabi-matchers</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
@@ -118,10 +91,20 @@
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params -->
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>2.2.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.typesafe/config -->
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+        </dependency>
+
     </dependencies>
+
+
 </project>
