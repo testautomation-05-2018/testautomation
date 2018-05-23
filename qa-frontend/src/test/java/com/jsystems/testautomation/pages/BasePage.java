@@ -14,9 +14,13 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void waitForVisibilityOfElement(WebElement webElement, int maxWaitTime){
+    public void waitForElementToBeClickable(WebElement webElement, int maxWaitTime){
         WebDriverWait webDriverWait = new WebDriverWait(driver, maxWaitTime);
-        webDriverWait.until(ExpectedConditions.invisibilityOf(webElement));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
 
+    public void waitForVisibilityOfElement(WebElement element, int maxWaitTime){
+        WebDriverWait wait = new WebDriverWait(driver, maxWaitTime);
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 }

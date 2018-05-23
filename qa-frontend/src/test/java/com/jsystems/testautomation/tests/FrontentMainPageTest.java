@@ -32,13 +32,13 @@ public class FrontentMainPageTest extends FrontendConfig {
         mainPage.loginButton.click();
         loginPageEmail = new LoginPageEmail(driver);
         loginPageEmail.emailField.sendKeys(Configuration.WORDPRESS_EMAIL);
-//        loginPageEmail.waitForVisibilityOfElement(loginPageEmail.continueButton, 15);
+        loginPageEmail.waitForElementToBeClickable(loginPageEmail.continueButton, 15);
         loginPageEmail.continueButton.click();
         LoginPasswordPage loginPasswordPage = new LoginPasswordPage(driver);
         loginPasswordPage.password.sendKeys(Configuration.WORDPRESS_PASSWORD);
         loginPasswordPage.logInButton.click();
         MainLogedPage mainLogedPage = new MainLogedPage(driver);
-//        mainLogedPage.waitForVisibilityOfElement(mainLogedPage.avatarIcon, 15);
+        mainLogedPage.waitForVisibilityOfElement(mainLogedPage.avatarIcon, 15);
         mainLogedPage.isContentPresent();
     }
 

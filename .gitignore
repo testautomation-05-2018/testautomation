@@ -31,3 +31,4 @@ hs_err_pid*
 /.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
 /qatestautomation/qatestautomation.iml
 /qa-web/qa-web.iml
+/qa-frontend/qa-frontend.iml
