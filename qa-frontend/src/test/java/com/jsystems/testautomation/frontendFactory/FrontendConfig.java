@@ -1,4 +1,4 @@
-package com.jsystems.testautomation;
+package com.jsystems.testautomation.frontendFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterAll;
@@ -21,6 +21,8 @@ public class FrontendConfig {
 
     @BeforeEach
     public void setUp(){
+//        String env = System.getenv("env");
+//        String local = System.getProperty("local");
 
         ChromeOptions chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("--start-maximized");

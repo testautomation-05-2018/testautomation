@@ -1,7 +1,6 @@
-package com.jsystems.testautomation.pages;
+package com.jsystems.testautomation.frontendFactory.pages;
 
-import com.jsystems.testautomation.TestDateHelper;
-import org.openqa.selenium.By;
+import com.jsystems.testautomation.frontendFactory.TestDateHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

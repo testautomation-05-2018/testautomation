@@ -1,14 +1,13 @@
-package com.jsystems.testautomation.tests;
+package com.jsystems.testautomation.frontendFactory.tests;
 
 import com.jsystems.testautomation.Configuration;
-import com.jsystems.testautomation.FrontendConfig;
-import com.jsystems.testautomation.pages.LoginPageEmail;
-import com.jsystems.testautomation.pages.LoginPasswordPage;
-import com.jsystems.testautomation.pages.MainLogedPage;
-import com.jsystems.testautomation.pages.MainPage;
+import com.jsystems.testautomation.frontendFactory.FrontendConfig;
+import com.jsystems.testautomation.frontendFactory.pages.LoginPageEmail;
+import com.jsystems.testautomation.frontendFactory.pages.LoginPasswordPage;
+import com.jsystems.testautomation.frontendFactory.pages.MainLogedPage;
+import com.jsystems.testautomation.frontendFactory.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 public class FrontentMainPageTest extends FrontendConfig {
 
