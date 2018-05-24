@@ -20,28 +20,28 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <profiles>
-        <!-- profile do uruchamiania testów według tagu-->
-        <!-- wywołanie mvn clean install -PallTests -->
-        <profile>
-            <id>allTests</id>
-            <properties>
-                <tests>all</tests>
-            </properties>
-        </profile>
-        <profile>
-            <id>regresion</id>
-            <properties>
-                <tests>Repeated</tests>
-            </properties>
-        </profile>
-        <profile>
-            <id>param</id>
-            <properties>
-                <tests>param</tests>
-            </properties>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--&lt;!&ndash; profile do uruchamiania testów według tagu&ndash;&gt;-->
+        <!--&lt;!&ndash; wywołanie mvn clean install -PallTests &ndash;&gt;-->
+        <!--<profile>-->
+            <!--<id>allTests</id>-->
+            <!--<properties>-->
+                <!--<tests>all</tests>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>regresion</id>-->
+            <!--<properties>-->
+                <!--<tests>Repeated</tests>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>param</id>-->
+            <!--<properties>-->
+                <!--<tests>param</tests>-->
+            <!--</properties>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
     <build>
         <plugins>
