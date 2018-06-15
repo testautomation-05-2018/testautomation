@@ -2,7 +2,7 @@ package com.jsystems.testautomation.frontendBDD.steps;
 
 import cucumber.api.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
+import cucumber.api.java.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
@@ -44,7 +44,7 @@ public class StepsConfig {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-
+//After must be imported from cucumber (import cucumber.api.java.After;)
     @After
     public void tearDown(Scenario scenario) {
 
